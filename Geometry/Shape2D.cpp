@@ -1,6 +1,5 @@
 #include "Shape2D.hpp"
 #include "../Parser/Parser.hpp"
-#include <cstring>
 #include <cmath>
 
 using namespace pc::geom;

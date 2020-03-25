@@ -1,7 +1,3 @@
-//
-// Created by leo on 20/03/2020.
-//
-
 #include "GShape2D.hpp"
 
 using namespace pc;

@@ -1,7 +1,3 @@
-//
-// Created by leo on 21/03/2020.
-//
-
 #ifndef PATTERNCREATOR_ENTITYSHAPE2D_HPP
 #define PATTERNCREATOR_ENTITYSHAPE2D_HPP
 

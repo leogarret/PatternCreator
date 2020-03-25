@@ -1,7 +1,3 @@
-//
-// Created by leo on 21/03/2020.
-//
-
 #include "Parser.hpp"
 
 using namespace pc::utils;
