@@ -138,14 +138,38 @@ Vertex2D Shape2D::getCentroid()
 
 double Shape2D::getWidth()
 {
-	return 0;
-	//return this->rectWrap[1][0] - this->rectWrap[0][0];
+	Vertex2D left(this->vertices[0]), right(this->vertices[0]);
+
+	// Start by get (xMin, yMin) and (xMax, yMin)
+	for (Vertex2D item : this->vertices)
+	{
+		if (item[0] < left[0]) left[0] = item[0];
+		if (item[1] < left[1]) left[1] = item[1];
+
+		if (item[0] > right[0]) right[0] = item[0];
+		if (item[1] < right[1]) right[1] = item[1];
+	}
+
+	// Compute distance
+	return sqrt(pow(right[0] - left[0], 2) + pow(right[1] - left[1], 2));
 }
 
 double Shape2D::getHeight()
 {
-	return 0;
-	//return this->rectWrap[2][1] - this->rectWrap[0][1];
+	Vertex2D left(this->vertices[0]), right(this->vertices[0]);
+
+	// Start by get (xMin, yMin) and (xMin, yMax)
+	for (Vertex2D item : this->vertices)
+	{
+		if (item[0] < left[0]) left[0] = item[0];
+		if (item[1] < left[1]) left[1] = item[1];
+
+		if (item[0] < right[0]) right[0] = item[0];
+		if (item[1] > right[1]) right[1] = item[1];
+	}
+
+	// Compute distance
+	return sqrt(pow(right[0] - left[0], 2) + pow(right[1] - left[1], 2));
 }
 
 Vertex2D Shape2D::getOrigin()

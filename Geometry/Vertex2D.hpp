@@ -39,7 +39,6 @@ namespace pc::geom {
 		 private:
 			std::array<double, 2> vertex { 0.0f, 0.0f };
 	};
-
 }
 
 std::ostream& operator<<(std::ostream&, pc::geom::Vertex2D&);

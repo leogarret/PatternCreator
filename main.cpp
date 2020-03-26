@@ -20,6 +20,8 @@ int main()
 
 	pc::debug::GShape2D gRectWrap(pcShape.getRectWrap());
 	gRectWrap.setFillColor(250, 100, 50);
+
+	std::cout << "Width = " << pcShape.getWidth() << " - Height = " << pcShape.getHeight() << std::endl;
 	
 	while (window.isOpen())
 	{

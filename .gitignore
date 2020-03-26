@@ -1,0 +1,5 @@
+main.cpp
+*.pcsd
+CMakeLists.txt
+cmake-build-debug
+.idea
